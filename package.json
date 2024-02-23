@@ -1,0 +1,29 @@
+{
+  "name": "webistes",
+  "version": "1.0.0",
+  "description": "https://github.com/nhajthofa8/nodejs_websites.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhajthofa8/nodejs_websites.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "nhathoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhajthofa8/nodejs_websites/issues"
+  },
+  "homepage": "https://github.com/nhajthofa8/nodejs_websites#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
