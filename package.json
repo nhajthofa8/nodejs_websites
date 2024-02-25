@@ -2,9 +2,9 @@
   "name": "webistes",
   "version": "1.0.0",
   "description": "https://github.com/nhajthofa8/nodejs_websites.git",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/nhajthofa8/nodejs_websites#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-load": "^1.1.16"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^3.1.0"
   }
 }
