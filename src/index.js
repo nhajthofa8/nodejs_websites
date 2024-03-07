@@ -11,6 +11,7 @@ db.connect();
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+
 ///HTTPS server
 app.use(morgan('combined'));
 
