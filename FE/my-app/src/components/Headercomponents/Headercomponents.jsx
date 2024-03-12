@@ -19,7 +19,7 @@ const Headercomponents = () => {
       <Col span={12}>
       <ButtonInputSearch 
       size="large"
-      textButton='Tim kiem'
+      textButton='Search'
       placeholder = 'input search text'
      
       />
