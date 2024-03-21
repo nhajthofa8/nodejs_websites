@@ -7,9 +7,15 @@ import {  UserOutlined,
   ArrowDownOutlined,
   ShoppingCartOutlined
 } from '@ant-design/icons';
-
+import {useNavigate} from 'react-router-dom';
 
 const Headercomponents = () => {
+  const navigate = useNavigate()
+
+  const handleNavigateLogin =() => {
+    navigate('/sign-in')
+  
+  }  
   return (
     <div>
       <WrapperHeader gutter={16}>
@@ -27,7 +33,7 @@ const Headercomponents = () => {
     <Col span={6} style={{ display :'flex' , gap:'20px'}}>
       <WrapperHeaderAccout>
         <UserOutlined style={{ fontSize: '30px'}} />
-        <div>
+        <div onClick={handleNavigateLogin } style={{ cursor:'pointer'}}>
             <WrapperTextHeaderSmall >Dang Nhap/Dang Ky</WrapperTextHeaderSmall>
         <div>
             <WrapperTextHeaderSmall>Tai Khoan</WrapperTextHeaderSmall>

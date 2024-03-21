@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 async function connect(){
     try{
-        await mongoose.connect('mongodb://127.0.0.1:27017/web_xodua_db',{        
+        await mongoose.connect('mongodb+srv://huynhnhathoa415305:11092001Az@cluster0.znjh4sd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{        
             useNewUrlParser:true,
             useUnifiedTopology:true,
     });

@@ -1,28 +1,24 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = 3000;
-const handlebars = require('express-handlebars');
+const port = 3002;
 const morgan = require('morgan');
 const db = require('./config/db/');
-
-
-db.connect();
-
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-///HTTPS server
-app.use(morgan('combined'));
+const cors = require('cors');
+const bodyParser = require('body-parser')
 
 const route = require('./routes');
 
-//Templates engine
-app.engine('hbs', handlebars.engine({ extname: '.hbs' }));
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
 
+app.use(morgan('combined'));
+///HTTPS server
+
+app.use(bodyParser.json());
+app.use(cors());
 route(app);
+
+db.connect();
+
 
 //127.0.0.1 -localhost
 app.listen(port, () => {

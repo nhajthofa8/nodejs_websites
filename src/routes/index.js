@@ -1,17 +1,7 @@
-const newsRouter = require('./news');
-const searchRouter = require('./search');
+const UserRouter= require('./UserRouter')
 
-function route(app) {
-  app.use('/news', newsRouter);
+const routes = (app) =>
+{    app.use('/api/user', UserRouter)
 
-  app.use('/search', searchRouter);
-
-  app.get('/', (req, res) => {
-    res.render('home');
-  });
-  app.post('/search', (req, res) => {
-    console.log(req.body);
-    res.send('');
-  });
 }
-module.exports = route;
+module.exports = routes;

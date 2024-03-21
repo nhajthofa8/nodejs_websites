@@ -58,7 +58,6 @@ export const ProductDetailscomponents = () => {
                </div>
             <div style={{ display:'flex', alignItems:'center',gap:'12px'}}>
             <Buttoncomponents
-                    boder={false}
                     size ={40}
                     style ={{ 
                             background: 'rgb(255,57,69)',
@@ -71,8 +70,7 @@ export const ProductDetailscomponents = () => {
                     styleTextButton={{color:'#fff',fontSize:'15px',fontWeight:'700'}}
                >
                </Buttoncomponents>
-               <Buttoncomponents
-                    boder={false}
+               <Buttoncomponents       
                     size ={40}
                     style ={{ 
                             background: '#fff',
