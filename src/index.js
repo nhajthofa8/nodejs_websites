@@ -12,9 +12,8 @@ const route = require('./routes');
 
 app.use(morgan('combined'));
 ///HTTPS server
-
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors)
 route(app);
 
 db.connect();

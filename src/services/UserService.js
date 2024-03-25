@@ -16,8 +16,10 @@ const createUser = (newUser) => {
             }
             const hash = bcrypt.hashSync(password, 10)
             const createdUser = await User.create({
+                
                 email,
                 password: hash,
+                confirmPassword:hash
             })
             if (createdUser) {
                 resolve({
