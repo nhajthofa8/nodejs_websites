@@ -3,14 +3,17 @@ import styled from "styled-components";
 
 export const WrapperHeader = styled(Row)`
     padding: 10px 120px;
-    background-color: rgb(9, 120, 41);
     align-items: center;
 `
 export const WrapperTextHeader = styled.span`
-    font-size: 18px;
+    font-size: 30px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 900;
     text-align: left;
+    color: rgb(9,120,41);
+    padding:10px 0px;
+    text-transform:uppercase;
+    grid-area:auto;
 
 `
     
@@ -18,17 +21,21 @@ export const WrapperTextHeader = styled.span`
 export const WrapperHeaderAccout = styled.div`
     display: flex;
     align-items: center;
-    color: #fff;
+    color: rgb(9,120,41);
     gap: 10px;
     font-size: 12px;
+    font-weight: 700;
 `
 export const WrapperTextHeaderSmall = styled.span`
         font-size: 12px;
-        color: #fff;
+        color: rgb(9,120,41);
+        font-weight: 700;
+        font-size: px;
 
 `
 export const WrapperTextHeaderIcon = styled.span`
         font-size:'30px';
-        color: #fff;
+        color: rgb(9,120,41);
+        font-weight: 700;
 `
 

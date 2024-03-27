@@ -12,6 +12,7 @@ export const ButtonInputSearch = (props) => {
         backgroundColorInput ='#fff'
         ,backgroundColorButton ='rgb(9, 120, 41)',
         colorButton = '#fff',
+        
     } = props
   return (
     <div style={{display:'flex'}}>

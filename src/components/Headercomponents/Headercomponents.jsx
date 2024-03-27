@@ -25,27 +25,26 @@ const Headercomponents = () => {
       <Col span={12}>
       <ButtonInputSearch 
       size="large"
-      textButton='Search'
-      placeholder = 'input search text'
-     
+      placeholder = 'Tìm kiếm....'
       />
       </Col>
     <Col span={6} style={{ display :'flex' , gap:'20px'}}>
       <WrapperHeaderAccout>
         <UserOutlined style={{ fontSize: '30px'}} />
         <div onClick={handleNavigateLogin } style={{ cursor:'pointer'}}>
-            <WrapperTextHeaderSmall >Dang Nhap/Dang Ky</WrapperTextHeaderSmall>
+            <WrapperTextHeaderSmall >ĐĂNG NHẬP/ĐĂNG KÝ</WrapperTextHeaderSmall>
         <div>
-            <WrapperTextHeaderSmall>Tai Khoan</WrapperTextHeaderSmall>
+            <WrapperTextHeaderSmall>TÀI KHOẢN</WrapperTextHeaderSmall>
             <ArrowDownOutlined/>
           </div>
         </div>
-      </WrapperHeaderAccout>
+     
       <div>
-          <ShoppingCartOutlined style={{ fontSize :'30px'}}/>
-          <WrapperTextHeaderSmall>Gio Hang</WrapperTextHeaderSmall>
+          <ShoppingCartOutlined style={{ fontSize :'30px',}}/>
+          <WrapperTextHeaderSmall>GIỎ HÀNG</WrapperTextHeaderSmall>
       </div>
-      </Col>
+      </WrapperHeaderAccout>
+    </Col>
     </WrapperHeader>
   </div>
   )
