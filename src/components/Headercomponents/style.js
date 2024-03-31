@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const WrapperHeader = styled(Row)`
     padding: 10px 120px;
     align-items: center;
+    /* Các điều chỉnh cho thiết bị di động */
+
 `
 export const WrapperTextHeader = styled.span`
     font-size: 30px;

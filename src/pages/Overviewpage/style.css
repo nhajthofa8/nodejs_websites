@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    {
+     display: block; /* Hiển thị section theo dạng block thay vì flex trên mobile */
+   }
+   .section-content {
+     padding: 30px 15px; /* Giảm padding ở phần nội dung chính */
+   }
+   .col {
+     width: 100%; /* Sử dụng toàn bộ chiều rộng của màn hình */
+     padding: 15px 0; /* Giảm padding ở cột */
+   }
+   h2 {
+     font-size: 1.4em; /* Giảm kích thước font chủ đề */
+   }
+   p,
+   div {
+     font-size: 14px; /* Giảm kích thước font cho nội dung */
+   }
+ }

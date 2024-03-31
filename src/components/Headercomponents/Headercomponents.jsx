@@ -1,22 +1,19 @@
 import React from 'react'
 import { Col } from 'antd';
 import { WrapperHeader,WrapperHeaderAccout,WrapperTextHeader,WrapperTextHeaderSmall } from './style';
-
 import { ButtonInputSearch } from './../ButtonInputSearch/ButtonInputSearch';
 import {  UserOutlined,
   ArrowDownOutlined,
   ShoppingCartOutlined
 } from '@ant-design/icons';
 import {useNavigate} from 'react-router-dom';
-
 const Headercomponents = () => {
   const navigate = useNavigate()
-
   const handleNavigateLogin =() => {
     navigate('/sign-in')
-  
   }  
   return (
+    <span className='headerMenu'>
     <div>
       <WrapperHeader gutter={16}>
       <Col span={6}>    
@@ -47,6 +44,7 @@ const Headercomponents = () => {
     </Col>
     </WrapperHeader>
   </div>
+  </span>
   )
 }
 

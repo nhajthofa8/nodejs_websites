@@ -1,0 +1,9 @@
+@font-face {
+	font-family:"UVN BAI SAU";
+	src: local("UVN BAI SAU"), url("../../assets/fonts/UVNBaiSau_B.TTF") format ("truetype");
+}
+body {
+    font-family: 'UVN BAI SAU', sans-serif;
+}
+/* CSS for desktop (min-width: 839px) */
+/* You might not need specific styles for desktop if Ant Design components already handle it well */

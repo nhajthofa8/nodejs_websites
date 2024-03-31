@@ -1,0 +1,27 @@
+@media (min-width: 839px) {
+    .menu-container {
+      display: none;
+      width:100%;
+    }
+  }
+  .drawer-menu {
+    .ant-drawer-body {
+      padding: 0;
+    }
+  }
+  .menu-icon {
+    display: block;
+    margin-bottom:15px;
+    margin-top:15px;
+    margin-left:15px;
+    font-size:10px;
+    background:green;
+    font-weight:700;
+  }
+  
+  @media (max-width: 839px) {
+    .headerMenu{
+      display: none;
+    }
+  }
+  

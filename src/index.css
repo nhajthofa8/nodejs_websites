@@ -5,9 +5,19 @@ body {
   margin: 0;
   box-sizing : bonder-box;
   padding:0;
+  font-family:'UVN BAI SAU', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'UVN BAI SAU';
+  src: url('./assets/fonts/UVNBaiSau_B.TTF') format('truetype');
+}
+/* Đảm bảo nội dung phù hợp trên các thiết bị có độ rộng nhỏ hơn */
+
+
+
+
