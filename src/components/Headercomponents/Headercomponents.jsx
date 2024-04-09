@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col } from 'antd';
 import { WrapperHeader,WrapperHeaderAccout,WrapperTextHeader,WrapperTextHeaderSmall } from './style';
+import {WrapperMenuHeader,WrapperNavHeader,WrapperItemHeader} from './style.js';
 import { ButtonInputSearch } from './../ButtonInputSearch/ButtonInputSearch';
 import {  UserOutlined,
   ArrowDownOutlined,
@@ -13,7 +14,7 @@ const Headercomponents = () => {
     navigate('/sign-in')
   }  
   return (
-    <span className='headerMenu'>
+    <div className='headerMenu'>
     <div>
       <WrapperHeader gutter={16}>
       <Col span={6}>    
@@ -42,9 +43,28 @@ const Headercomponents = () => {
       </div>
       </WrapperHeaderAccout>
     </Col>
-    </WrapperHeader>
+  </WrapperHeader>
+    <WrapperMenuHeader>
+      <WrapperNavHeader>
+        <WrapperItemHeader>
+          Trang chủ
+        </WrapperItemHeader>
+      <WrapperItemHeader>
+         Giới thiệu
+      </WrapperItemHeader>
+      <WrapperItemHeader>
+          Sản Phẩm
+      </WrapperItemHeader>
+      <WrapperItemHeader>
+          tin tức
+      </WrapperItemHeader>
+      <WrapperItemHeader>
+          Liên Hệ
+      </WrapperItemHeader>
+      </WrapperNavHeader>
+    </WrapperMenuHeader>
+    </div>
   </div>
-  </span>
   )
 }
 

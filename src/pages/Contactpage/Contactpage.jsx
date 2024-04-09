@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
-import { Row,Col,Form, Input, Button,Image } from 'antd';
+import React,{useState} from 'react';
+import { Row, Image, Col} from 'antd';
 import {WrapperContact} from'./style.js';
+import { InputFrom } from '../../components/InputForm/InputFrom.jsx';
+import Buttoncomponents from './../../components/Buttoncomponents/Buttoncomponents';
 const Contactpage = () => {
-  const [form] = Form.useForm();
-  const [loading, setLoading] = useState(false);
+  const [name,setName] = useState('');
+  const [phone,setPhone] = useState('');
+  const [address,setAddress] = useState('');
+  const [contents,setContent] = useState('');
 
-  const onFinish = (values) => {
-    setLoading(true);
-    // Ở đây bạn có thể thực hiện xử lý gửi dữ liệu đi
-    console.log('Submitted values:', values);
-    setLoading(false);
-  };
+  const handleOneChangeName =(value)=>{
+    setName(value);
+}
 
+const handleOneChangePhone =(value)=>{
+   setPhone(value);
+}
+const handleOneChangeAddress =(value)=>{
+  setAddress(value);
+}
+
+const handleOneChangeContents = (value)=>{
+  setContent(value);
+}
   return (
    < WrapperContact>
     <section >
@@ -28,36 +39,53 @@ const Contactpage = () => {
         </p>
         </div>
     </Col>
+    </Row >
+    <Row style={{alignItems:'center',justifyContent:'center', marginBottom:'100px'}}>
+    <div className=''style={{background:'rgb(9,120,41)',width:'500px',display:'block'}} >
+      <div style={{marginTop:'50px',marginLeft:'10px',marginBottom:'50px', marginRight:'10px'}}>
+      <InputFrom
+      style={{fontFamily:'Roboto',height:'40px',alignItems:'center',justifyContent:'center',lineHeight:'24px',fontSize:'15px',margin:'0px 0px 15.52px' ,display:'inline-block',boxShadow:' rgb(204 204 204) 0px 0px 5px 0px'}}
+       placeholder="Họ và Tên"
+       value={name} 
+       onChange={handleOneChangeName} />
+      <InputFrom
+      style={{fontFamily:'Roboto',height:'40px',padding:'0px 11.6px',lineHeight:'24px',fontSize:'15px',margin:'0px 0px 15.52px' ,display:'inline-block',boxShadow:' rgb(204 204 204) 0px 0px 5px 0px'}}
+            placeholder="phone"
+            value={phone}
+            onChange={handleOneChangePhone}
+      />
+          <InputFrom
+          style={{fontFamily:'Roboto',height:'40px',padding:'0px 11.6px',lineHeight:'24px',fontSize:'15px',margin:'0px 0px 15.52px' ,display:'inline-block',boxShadow:' rgb(204 204 204) 0px 0px 5px 0px'}}
+        
+              placeholder="Địa Chỉ"
+              value={address}
+              onChange={handleOneChangeAddress}
+            />
+
+            <InputFrom
+            style={{fontFamily:'Roboto',height:'120px',padding:'0px 11.6px',lineHeight:'24px',fontSize:'15px',margin:'0px 0px 15.52px' ,display:'inline-block',boxShadow:' rgb(204 204 204) 0px 0px 5px 0px'}}
+                  placeholder="Nội Dung..."
+                  value={contents}
+                  onChange={handleOneChangeContents}
+                  size={40}
+            />
+  
+          <Buttoncomponents
+            disabled={!name.length || !phone.length || !address.length || !contents.length}
+            size={40}
+            styleButton={{
+              background: 'rgb(255, 57, 69)',
+              height: '48px',
+              fontFamily:'Roboto',
+              border: 'none',
+              borderRadius: '4px',
+            }}
+            textButton={'Liên Hệ'}
+            styleTextButton={{color:'#fff',fontSize:'15px',fontWeight:'700'}}
+          ></Buttoncomponents>
+         </div>
+      </div>
     </Row>
-    <Row>
-    <div className='col-inner algin-center' >
-    <Form style={{float:'rigt'}} form={form} layout="vertical" onFinish={onFinish}>
-      <Form.Item
-        name="fullName"
-        label="Họ và Tên"
-        rules={[{ required: true, message: 'Vui lòng nhập họ và tên!' }]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="phoneNumber"
-        label="Số điện thoại"
-        rules={[{ required: true, message: 'Vui lòng nhập số điện thoại!' }]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item name="note" label="Ghi chú">
-        <Input.TextArea />
-      </Form.Item>
-      <Form.Item>
-        <Button type="primary" htmlType="submit" loading={loading}>
-          Gửi
-        </Button>
-      </Form.Item>
-    </Form>
-    </div>
-    </Row>
-    
     </section>
     </WrapperContact>
   );

@@ -10,6 +10,7 @@ import { ButtonInputSearch } from '../../components/ButtonInputSearch/ButtonInpu
 import './style.css';
 import React, { useState } from 'react';
 import Contactpage from './../Contactpage/Contactpage';
+import Productpage from './../Productpage/Productpage';
 const Homepage =()=>{
     const [visible, setVisible] = useState(false);
 
@@ -73,6 +74,7 @@ const Homepage =()=>{
         </Col>
         
     </div>
+   
     <span className="">
         <div id="container" style={{backgroundColor:'#efefef', height:'auto', maxWidth:'100%'}}>
              <Slidercomponets arrImages ={[banner1,banner2]}/>
@@ -81,7 +83,9 @@ const Homepage =()=>{
     </div>
     </span>
     <Overviewpage></Overviewpage>
+    <Productpage></Productpage>
     <Contactpage></Contactpage>
+    
     <FooterPage></FooterPage>
     </>
     )

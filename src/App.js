@@ -10,10 +10,8 @@ function App() {
   
   return (
     <div>
-      
      <Router>
       <Routes>
-        
         {routes.map((route) => {
             const Page =route.page
             const Layout = route.isShowHeader ? Defaultcomponents: Fragment

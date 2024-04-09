@@ -10,7 +10,7 @@ export const WrapperMenuHeader =styled.div`
     z-index: 9;
     position: relative;
 `
-export const WrapperNavHeader =styled.div`
+export const WrapperNavHeader =styled.ul`
     align-items: center;
     color: #fff;
     display: flex;
@@ -22,7 +22,7 @@ export const WrapperNavHeader =styled.div`
     max-width:1250px;
     margin:0 auto;
 `
-export const WrapperItemHeader =styled.div`
+export const WrapperItemHeader =styled.span`
     align-items: center;
     display:inline-flex;
     flex-wrap: wrap;
@@ -35,4 +35,5 @@ export const WrapperItemHeader =styled.div`
     text-transform:uppercase ;
     font-size: 18px;
     margin:0 11px;
+  
 `

@@ -1,0 +1,11 @@
+@media (min-width: 839px) {
+    .menu-container {
+      display: none;
+      width:100%;
+    }
+  }
+  @media (max-width: 839px) {
+    .headerMenu{
+      display: none;
+    }
+  }

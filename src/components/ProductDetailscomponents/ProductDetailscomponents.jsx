@@ -4,6 +4,7 @@ import imageProduct from '../../assets/images/bao-dog.webp'
 import imageProductSmall from '../../assets/images/bao-do-small.webp'
 import {EyeOutlined,PlusOutlined,MinusOutlined } from '@ant-design/icons'
 import {WrapperQualityProduct,WrapperAddressProduct,WrapperTextProduct ,WrapperStyleImageSmall,WrapperStyleImageCol,WrapperStyleNameProduct, WrapperStyleTextSell,WrapperPriceProduct, WrapperInputNumber } from './style';
+
 import Buttoncomponents from './../Buttoncomponents/Buttoncomponents';
 export const ProductDetailscomponents = () => {
     const onChange =() => {}
@@ -56,35 +57,37 @@ export const ProductDetailscomponents = () => {
                 </button>
                 </WrapperQualityProduct>
                </div>
-            <div style={{ display:'flex', alignItems:'center',gap:'12px'}}>
-            <Buttoncomponents
-                    size ={40}
-                    style ={{ 
-                            background: 'rgb(255,57,69)',
-                            height:'48px',
-                            width:'220px',
-                            border:'none',
-                            borderRadius:'4px'
-                    }}
-                    textButton={'Chon Mua'}
-                    styleTextButton={{color:'#fff',fontSize:'15px',fontWeight:'700'}}
-               >
-               </Buttoncomponents>
-               <Buttoncomponents       
-                    size ={40}
-                    style ={{ 
-                            background: '#fff',
-                            height:'48px',
-                            width:'220px',
-                            border:'1px solid rgb(13,92,182)',
-                            borderRadius:'4px'
-                    }}
-                    textButton={'Mua Tra Sau'}
-                    styleTextButton={{color:'rgb(13,92,182',fontSize:'15px'}}
-               >
-               </Buttoncomponents>
-            </div>
-    </Col>
+               <div style={{ display: 'flex', aliggItems: 'center', gap: '12px' }}>
+                        <div>
+                            <Buttoncomponents
+                                size={40}
+                                styleButton={{
+                                    background: 'rgb(255, 57, 69)',
+                                    height: '48px',
+                                    width: '220px',
+                                    border: 'none',
+                                    borderRadius: '4px'
+                                }}
+                                textButton={'Chọn mua'}
+                                styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
+                            ></Buttoncomponents>
+                           
+                        </div>
+                        <Buttoncomponents
+                            size={40}
+                            styleButton={{
+                                background: '#fff',
+                                height: '48px',
+                                width: '220px',
+                                border: '1px solid rgb(13, 92, 182)',
+                                borderRadius: '4px'
+                            }}
+                            textButton={'Mua trả sau'}
+                            styleTextButton={{ color: 'rgb(13, 92, 182)', fontSize: '15px' }}
+                        ></Buttoncomponents>
+                    </div>
+                </Col>
+
    </Row>
   )
 }

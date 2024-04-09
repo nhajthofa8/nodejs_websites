@@ -13,3 +13,4 @@ export const InputFrom = (props) => {
     <WrapperInputStyle placeholder={placeholder} value={props.value} {...rests} onChange={handleOnchangeInput} />
   )
 }
+
