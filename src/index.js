@@ -1,19 +1,15 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = 3002;
+const port = 3003;
 const morgan = require('morgan');
 const db = require('./config/db/');
-const cors = require('cors');
 const bodyParser = require('body-parser')
-
 const route = require('./routes');
 
-
+app.use(bodyParser.json());
 app.use(morgan('combined'));
 ///HTTPS server
-app.use(bodyParser.json());
-app.use(cors)
 route(app);
 
 db.connect();
